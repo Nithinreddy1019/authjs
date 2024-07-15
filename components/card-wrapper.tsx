@@ -27,7 +27,7 @@ export const CardWrapper = ({
     showSocials
 }: CardWrapperProps) => {
     return (
-        <Card className="shadow-[5px_5px_0px_0px_rgba(109,40,217)] dark:border-none">
+        <Card className="shadow-[5px_5px_0px_0px_rgba(109,40,217)] dark:border-none py-6">
             <CardHeader>
                 <h1 className="text-4xl font-medium">
                     {headerLabel}
