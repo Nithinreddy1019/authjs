@@ -16,6 +16,7 @@ export const BackButton = ({
             variant="link"
             size="sm"
             asChild
+            className="px-0"
         >
             <Link href={href}>
                 {label}

@@ -1,6 +1,8 @@
 import { LoginButton } from "@/components/auth/login-button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
+import { MdLogin } from "react-icons/md";
+
 
 export default function Home() {
   return (
@@ -19,7 +21,8 @@ export default function Home() {
         </div>
         <LoginButton>
           <Button size="lg">
-            Hello
+            Get in 
+            <MdLogin className="ml-1 h-5 w-5"/>
           </Button>
         </LoginButton>
       </section>

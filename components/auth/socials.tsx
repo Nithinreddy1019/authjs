@@ -9,7 +9,7 @@ export const Socials = () => {
     return (
         <div className="flex items-center w-full gap-x-2">
             <Button
-                className="w-full"
+                className="w-fit"
                 size="sm"
                 variant="secondary"
                 // WIP: Add onClick
@@ -18,7 +18,7 @@ export const Socials = () => {
                 <FcGoogle className="w-4 h-4"/>
             </Button>
             <Button
-                className="w-full"
+                className="w-fit"
                 size="sm"
                 variant="secondary"
                 // WIP: Add onClick
