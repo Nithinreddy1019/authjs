@@ -20,6 +20,7 @@ import { FormError } from "../toasts/form-error";
 import { FormSuccess } from "../toasts/form-success";
 import { loginaction } from "@/actions/login-action";
 import { useState, useTransition } from "react";
+import { registeraction } from "@/actions/register-action";
 
 
 export const RegisterForm = () => {
@@ -41,14 +42,13 @@ export const RegisterForm = () => {
         setError("")
         setSuccess("")
 
-        console.log(values);
-        // setTransition(() => {
-        //     loginaction(values)
-        //     .then((data) => {
-        //         setError(data.error);
-        //         setSuccess(data.success);
-        //     })
-        // })
+        setTransition(() => {
+            registeraction(values)
+            .then((data) => {
+                setError(data.error);
+                setSuccess(data.success);
+            })
+        })
     }
 
     return (
