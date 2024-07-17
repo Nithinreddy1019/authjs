@@ -14,7 +14,7 @@ export default auth((req) => {
     const isAuthenticationRoute = authenticationRoutes.includes(nextUrl.pathname);
 
     if (isAuthenticationApiRoute) {
-        return undefined;
+        return ;
     }
 
     if (isAuthenticationRoute) {

@@ -20,9 +20,15 @@ import { FormError } from "../toasts/form-error";
 import { FormSuccess } from "../toasts/form-success";
 import { loginaction } from "@/actions/login-action";
 import { useState, useTransition } from "react";
+import { useSearchParams } from "next/navigation";
 
 
 export const LoginForm = () => {
+
+    const searchParams = useSearchParams();
+    const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
+        ? "Email is already in use with different provider"
+        : ""
 
     const [isPending, setTransition] = useTransition();
     const [error, setError] = useState<string | undefined>("");
@@ -103,7 +109,7 @@ export const LoginForm = () => {
                             )}
                         />
                     </div>
-                    <FormError message={error}/>
+                    <FormError message={error || urlError}/>
                     <FormSuccess message={success}/>
                     <Button
                         className="font-bold"

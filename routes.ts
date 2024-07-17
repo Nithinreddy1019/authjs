@@ -5,7 +5,8 @@ export const publicRoutes = [
 
 export const authenticationRoutes = [
     "/auth/login",
-    "/auth/register"
+    "/auth/register",
+    "/auth/error"
 ]
 
 
