@@ -20,6 +20,18 @@ declare module "next-auth" {
  
 export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
+    async signIn({ user, account }) {
+      if (account?.provider !== "credentials") return true;
+
+      const existingUser = await getUserById(user.id as string);
+
+      //prevent singin - no eamil verified
+      if(!existingUser?.emailVerified) return false;
+
+      //WIP: add 2FA check
+
+      return true;
+    },
     async jwt({token, user}) {
       if (!token.sub) return token;
 
