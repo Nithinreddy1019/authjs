@@ -14,7 +14,7 @@ export const FormSuccess = ({
     return (
         <div className=" bg-emerald-500/30 flex items-center gap-x-2 p-1.5 px-4 rounded-lg text-emerald-500">
             <CheckCircledIcon className="h-4 w-4 "/>
-            <p>{message}</p>
+            <p className="text-sm">{message}</p>
         </div>
     )
 }
